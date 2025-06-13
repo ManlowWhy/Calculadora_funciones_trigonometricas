@@ -158,3 +158,43 @@ public class Calculador_trigonometrico {
             System.out.printf("arcsin(%.6f) = %.6f radianes%n", valor, resultado);
         }
     }
+
+    private static void calcularArcCos(BufferedReader br) {
+        System.out.print("Ingresa un valor entre -1 y 1: ");
+        String linea;
+        double valor;
+        try {
+            linea = br.readLine();
+            valor = Double.parseDouble(linea.trim());
+        } catch (IOException e) {
+            System.out.println("Error al leer. Regresando al menu");
+            return;
+        } catch (NumberFormatException e) {
+            System.out.println("Entrada invalida. Debes ingresar un numero.");
+            return;
+        }
+        if (valor < -1 || valor > 1) {
+            System.out.println("Valor fuera de rango. Debe estar entre -1 y 1.");
+        } else {
+            double resultado = Math.acos(valor);
+            System.out.printf("arccos(%.6f) = %.6f radianes%n", valor, resultado);
+        }
+    }
+
+    private static void calcularArcTan(BufferedReader br) {
+        System.out.print("Ingresa el valor α: ");
+        String linea;
+        double valor;
+        try {
+            linea = br.readLine();
+            valor = Double.parseDouble(linea.trim());
+        } catch (IOException e) {
+            System.out.println("Error al leer. Regresando al menu");
+            return;
+        } catch (NumberFormatException e) {
+            System.out.println("Entrada invalida. Debes ingresar un numero.");
+            return;
+        }
+        double resultado = Math.atan(valor);
+        System.out.printf("arctan(%.6f) = %.6f radianes%n", valor, resultado);
+    }

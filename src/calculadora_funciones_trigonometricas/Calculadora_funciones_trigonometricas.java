@@ -39,3 +39,46 @@ public class Calculador_trigonometrico {
                 System.out.println();
                 continue; 
             }
+
+            // Ejecutar según la opción elegida
+            switch (opcion) {
+                case 1:
+                    calcularSin(br);
+                    break;
+                case 2:
+                    calcularCos(br);
+                    break;
+                case 3:
+                    calcularTan(br);
+                    break;
+                case 4:
+                    calcularArcSin(br);
+                    break;
+                case 5:
+                    calcularArcCos(br);
+                    break;
+                case 6:
+                    calcularArcTan(br);
+                    break;
+                case 7:
+                    calcularSinh(br);
+                    break;
+                case 8:
+                    calcularCosh(br);
+                    break;
+                case 9:
+                    calcularTanh(br);
+                    break;
+                case 0:
+                    salir = true;
+                    System.out.println("Adios :)");
+                    break;
+                default:
+                    System.out.println("Opcion invalida. Intenta de nuevo.");
+            }
+
+            System.out.println(); 
+        }
+
+        
+    }

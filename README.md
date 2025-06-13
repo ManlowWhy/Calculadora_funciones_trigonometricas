@@ -4,3 +4,4 @@ Autores: Emerson Johan Wallace Marin 2025098309, Fared Alonso Carballo Quesada 2
 Descripción: Este proyecto es una calculadora trigonométrica de consola que permite calcular:
 Funciones trigonométricas directas: sin(α), cos(α), tan(α)
 Funciones trigonométricas inversas: arcsin(α), arccos(α), arctan(α)
+Funciones trigonometricas hiperbolicas: sinh(α), cosh(α), tanh(α)

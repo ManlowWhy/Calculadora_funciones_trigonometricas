@@ -82,3 +82,79 @@ public class Calculador_trigonometrico {
 
         
     }
+
+    private static void calcularSin(BufferedReader br) {
+        System.out.print("Ingresa el angulo α en radianes: ");
+        String linea;
+        double alpha;
+        try {
+            linea = br.readLine();
+            alpha = Double.parseDouble(linea.trim());
+        } catch (IOException e) {
+            System.out.println("Error al leer. Regresando al menu");
+            return;
+        } catch (NumberFormatException e) {
+            System.out.println("Entrada invalida. Debes ingresar un numero.");
+            return;
+        }
+        double resultado = Math.sin(alpha);
+        System.out.printf("sin(%.6f) = %.6f%n", alpha, resultado);
+    }
+
+    private static void calcularCos(BufferedReader br) {
+        System.out.print("Ingresa el angulo α en radianes: ");
+        String linea;
+        double alpha;
+        try {
+            linea = br.readLine();
+            alpha = Double.parseDouble(linea.trim());
+        } catch (IOException e) {
+            System.out.println("Error al leer. Regresando al menu.");
+            return;
+        } catch (NumberFormatException e) {
+            System.out.println("Entrada invalida. Debes ingresar un numero.");
+            return;
+        }
+        double resultado = Math.cos(alpha);
+        System.out.printf("cos(%.6f) = %.6f%n", alpha, resultado);
+    }
+
+    private static void calcularTan(BufferedReader br) {
+        System.out.print("Ingresa el angulo α en radianes: ");
+        String linea;
+        double alpha;
+        try {
+            linea = br.readLine();
+            alpha = Double.parseDouble(linea.trim());
+        } catch (IOException e) {
+            System.out.println("Error al leer. Regresando al menu");
+            return;
+        } catch (NumberFormatException e) {
+            System.out.println("Entrada invalida. Debes ingresar un numero.");
+            return;
+        }
+        double resultado = Math.tan(alpha);
+        System.out.printf("tan(%.6f) = %.6f%n", alpha, resultado);
+    }
+
+    private static void calcularArcSin(BufferedReader br) {
+        System.out.print("Ingresa un valor entre -1 y 1: ");
+        String linea;
+        double valor;
+        try {
+            linea = br.readLine();
+            valor = Double.parseDouble(linea.trim());
+        } catch (IOException e) {
+            System.out.println("Error al leer. Regresando al menu.");
+            return;
+        } catch (NumberFormatException e) {
+            System.out.println("Entrada invalida. Debes ingresar un numero.");
+            return;
+        }
+        if (valor < -1 || valor > 1) {
+            System.out.println("Valor fuera de rango. Debe estar entre -1 y 1.");
+        } else {
+            double resultado = Math.asin(valor);
+            System.out.printf("arcsin(%.6f) = %.6f radianes%n", valor, resultado);
+        }
+    }

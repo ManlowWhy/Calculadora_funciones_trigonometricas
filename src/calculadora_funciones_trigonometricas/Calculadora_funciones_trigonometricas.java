@@ -1,10 +1,10 @@
 package calculador_trigonometrico;
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader   
-  
+import java.io.InputStreamReader;
+
 public class Calculador_trigonometrico {
-  
+
     public static void main(String[] args) {
              BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         boolean salir = false;
@@ -26,3 +26,16 @@ public class Calculador_trigonometrico {
 
             String lineaOpcion;
             int opcion = -1;
+            try {
+                
+                lineaOpcion = br.readLine();
+                
+                opcion = Integer.parseInt(lineaOpcion.trim());
+            } catch (IOException e) {
+                System.out.println("Error de lectura. Intentalo de nuevo.");
+                continue; 
+            } catch (NumberFormatException e) {
+                System.out.println("Por favor ingresa un numero valido (0–9).");
+                System.out.println();
+                continue; 
+            }

@@ -198,3 +198,58 @@ public class Calculador_trigonometrico {
         double resultado = Math.atan(valor);
         System.out.printf("arctan(%.6f) = %.6f radianes%n", valor, resultado);
     }
+
+    private static void calcularSinh(BufferedReader br) {
+        System.out.print("Ingresa el angulo α en radianes: ");
+        String linea;
+        double alpha;
+        try {
+            linea = br.readLine();
+            alpha = Double.parseDouble(linea.trim());
+        } catch (IOException e) {
+            System.out.println("Error al leer. Regresando al menu");
+            return;
+        } catch (NumberFormatException e) {
+            System.out.println("Entrada invalida. Debes ingresar un numero.");
+            return;
+        }
+        double resultado = Math.sinh(alpha);
+        System.out.printf("sinh(%.6f) = %.6f%n", alpha, resultado);
+    }
+
+    private static void calcularCosh(BufferedReader br) {
+        System.out.print("Ingresa el angulo α en radianes: ");
+        String linea;
+        double alpha;
+        try {
+            linea = br.readLine();
+            alpha = Double.parseDouble(linea.trim());
+        } catch (IOException e) {
+            System.out.println("Error al leer. Regresando al menu");
+            return;
+        } catch (NumberFormatException e) {
+            System.out.println("Entrada invalida. Debes ingresar un numero");
+            return;
+        }
+        double resultado = Math.cosh(alpha);
+        System.out.printf("cosh(%.6f) = %.6f%n", alpha, resultado);
+    }
+
+    private static void calcularTanh(BufferedReader br) {
+        System.out.print("Ingresa el angulo α en radianes: ");
+        String linea;
+        double alpha;
+        try {
+            linea = br.readLine();
+            alpha = Double.parseDouble(linea.trim());
+        } catch (IOException e) {
+            System.out.println("Error al leer. Regresando al menu");
+            return;
+        } catch (NumberFormatException e) {
+            System.out.println("Entrada invalida. Debes ingresar un numero.");
+            return;
+        }
+        double resultado = Math.tanh(alpha);
+        System.out.printf("tanh(%.6f) = %.6f%n", alpha, resultado);
+    }
+}
